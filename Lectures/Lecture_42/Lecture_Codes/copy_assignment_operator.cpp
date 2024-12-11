@@ -84,7 +84,8 @@ int main() {
 
     hero2.print();
 
-    hero1 = hero2;      // copy assignment operator
+    hero1 = hero2;      // copy assignment operator ...it does deep copy means even if we change hero2 data after then
+    // hero1 content will remain same as hero2 when it was copied
     hero1.print();
 
     return 0;

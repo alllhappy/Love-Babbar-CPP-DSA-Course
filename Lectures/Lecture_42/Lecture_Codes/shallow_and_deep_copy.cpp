@@ -30,7 +30,7 @@ class Hero {
     // Copy constructor    ||    Deep Copy
     Hero(Hero& temp) {
         char *ch = new char[strlen(temp.name) + 1];
-        strcpy(ch, temp.name);
+        strcpy(ch, temp.name); //char* strcpy(char* destination, const char* source)
         this->name = ch;
 
         cout<<"Copy constructor called"<<endl;

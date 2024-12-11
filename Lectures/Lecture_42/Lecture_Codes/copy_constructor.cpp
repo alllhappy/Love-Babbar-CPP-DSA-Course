@@ -64,3 +64,12 @@ int main() {
 
     return 0;
 }
+/*
+Here, temp is an object of the same class Hero. Since the Hero class's member functions (including constructors) have direct access to 
+private and protected members of any Hero object, accessing temp.health and temp.level is valid.
+This encapsulation principle applies only to external access; members of the same class, regardless of the specific object,
+can access each other's private members.
+Key Takeaway:
+Private members are not globally accessible, but within the class, they are accessible by all member functions and constructors, 
+regardless of the specific object being operated on.
+*/

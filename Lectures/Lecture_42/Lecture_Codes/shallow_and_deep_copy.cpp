@@ -75,7 +75,7 @@ int main() {
     hero1.setName(name);
     hero1.print();
 
-    // default copy constructor uses shallow copy
+    // default copy constructor uses shallow copy but now we have converted it into deep copy
     Hero hero2(hero1);
     hero2.print();
 

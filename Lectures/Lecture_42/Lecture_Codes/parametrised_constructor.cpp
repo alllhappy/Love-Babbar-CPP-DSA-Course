@@ -16,11 +16,11 @@ class Hero {
     Hero(int health) {
         this->health = health;
     }
-
-    Hero(int health, char level) {
-        this->level = level;
-        this->health = health;
-    }
+    /// if name of parameters is different then easy no need to use this keyford 
+    Hero(int health, char level) {   ///--- Hero(int h,char l){
+        this->level = level;                      // level=l;                                          
+        this->health = health;                    // health=h;
+    }                                        // }
 
     int getHealth() {
         return health;

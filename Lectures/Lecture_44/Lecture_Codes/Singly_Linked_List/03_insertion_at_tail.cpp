@@ -19,12 +19,26 @@ void insertAtHead(Node* &head, int d) {
     head = temp;
 }
 
-// inserting new node at tail or ending
+// inserting new node at tail or ending 
 void insertAtTail(Node* &tail, int d) {
     Node* temp = new Node(d);
     tail->next = temp;
     tail = temp;
 }
+
+// inserting new node at tail given head only
+/*
+void insertAtTail(Node* &head,int d){
+    Node* temp= new Node(d);
+    Node *i=head;
+    while(i->next!=NULL){
+        i=i->next;
+    }
+    i->next=temp;
+    }
+    
+
+*/
 
 // print the linked list
 void print(Node* &head) {

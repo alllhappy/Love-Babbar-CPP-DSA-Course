@@ -134,6 +134,9 @@ void deleteNode(Node* &head, Node* &tail, int position) {
         curr->prev = NULL;
         prev->next = curr->next;
         curr->next = NULL;
+        if(curr->next != NULL){
+            curr->next->prev = prev;
+        }
         delete curr;
 
         // // handling tail value

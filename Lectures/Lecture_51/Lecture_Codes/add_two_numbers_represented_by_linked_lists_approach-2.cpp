@@ -95,6 +95,13 @@ class Solution
         
         // step 2 : add two linked list;
         Node* ans = add(first, second);
+
+        // removing leading zeroes if any
+        while((ans->data)==0&&ans->next!=NULL){
+           Node* temp=ans;
+           delete(temp);
+           ans=ans->next;
+       }
         
         // step 3 : again reverse this linked list
         ans = reverse(ans);

@@ -39,34 +39,35 @@ class heap {
         }
     }
 
-    void deleteFromHeap() {
-        if (size == 0) {
-            cout<<"Nothing to delete"<<endl;
+  void deletefromHeap()
+    {
+        if(size==0)
+        {
+            cout<<"No element present"<<endl;
+            return ;
         }
-
-        // step 1 : put last element to first index;
+        
         arr[1] = arr[size];
 
-        // step 2 : remove last element
-        size--;
-
-        // step 3 : take root node to its correct position
-        int index = 1;
-        while (index < size) {
-            int leftIndex = 2 * index;
-            int rightIndex = 2 * index + 1;
-
-            if (leftIndex < size && arr[leftIndex] > arr[index]) {
-                swap(arr[leftIndex], arr[index]);
-                index = leftIndex;
+        size = size - 1;
+        int i = 1;
+        int leftIndex,rightIndex;
+        while(i<size)
+        {
+            leftIndex = 2 * i;
+            rightIndex = 2*i + 1;
+            if(leftIndex <= size && arr[leftIndex]>arr[i] && arr[leftIndex]> arr[rightIndex])
+            {
+                swap(arr[leftIndex],arr[i]);
+                i = leftIndex;
             }
-            else if (rightIndex < size && arr[rightIndex] > arr[index]) {
-                swap(arr[rightIndex], arr[index]);
-                index = rightIndex;
+            else if(rightIndex <= size && arr[rightIndex]>arr[i] && arr[leftIndex]< arr[rightIndex])
+            {
+                swap(arr[rightIndex],arr[i]);
+                i = rightIndex;
             }
-            else {
-                return ;
-            }
+            else
+            return;
         }
     }
 

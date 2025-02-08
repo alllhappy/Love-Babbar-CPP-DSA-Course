@@ -32,7 +32,8 @@ class heap {
                 swap(arr[parent], arr[index]);
             }
             else {
-                return ;
+                // return ;
+                index = parent;
             }
 
         }

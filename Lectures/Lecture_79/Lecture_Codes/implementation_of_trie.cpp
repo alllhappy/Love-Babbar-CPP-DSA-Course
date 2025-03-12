@@ -95,6 +95,33 @@ class Trie {
         return searchUtil(root, word);
     }
 
+/*
+        // delete util function to delete word in trie
+    
+    //not space optimised solution
+    bool deleteUtil(TrieNode* root, string word) {
+        
+        if(searchWord(word)){
+            // delete
+            TrieNode* child=root;
+            for(int i=0;i<word.length();i++){
+                 int index = word[i] - 'A';
+                 root=child;
+                 child=root->children[index];
+                 
+            }
+            child->isTerminal=false;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    void deleteWord(string word) {
+        deleteUtil(root, word);
+    }
+*/
     // delete util function to delete word in trie
     bool deleteUtil(TrieNode* root, string word, int depth) {
         if (root == NULL)

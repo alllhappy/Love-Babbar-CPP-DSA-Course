@@ -26,6 +26,6 @@ class Solution {
         if(target==0) return true;
         int include=solve(index+1,target-arr[index],arr,n);
         int exclude=solve(index+1,target,arr,n);
-        return (include||exclude);
+        return (include||exclude)
     }
 };
